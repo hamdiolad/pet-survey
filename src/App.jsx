@@ -26,11 +26,23 @@ export const App = () => {
       </>
       )}
       {step === 3 && (
-        <>
+        <div style={{ 
+          backgroundColor: color,
+      // color: getTextColor(color),
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center'
+         }}>
         <h3>your new pet</h3>
         <p>name: {namePet}</p>
         <p>color: {color}</p>
-        </>
+      </div>
       )}
     </div>
   );
