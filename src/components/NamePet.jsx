@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const NamePet = ({ onNext }) => {
+const NamePet = ({ onNext, setNamePetProp }) => {
   const [namePet, setNamePet] = useState('');
 
   const handleNamePet = (event) => {
@@ -10,6 +10,7 @@ const NamePet = ({ onNext }) => {
   const handleSubmit = (event) => {
     event.preventDefault(); 
     console.log(namePet); 
+    setNamePetProp(namePet); 
     onNext();
   };
 

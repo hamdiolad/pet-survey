@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const ColorPet = () => {
+const ColorPet = ({ setColorPetProp, onNext }) => {
   const [color, setColor] = useState('');
 
   const handleColorPet = (event) => {
@@ -10,6 +10,8 @@ const ColorPet = () => {
   const handleSubmit = (event) => {
     event.preventDefault(); 
     console.log(color); 
+    setColorPetProp(color); 
+    onNext(); 
   };
 
   return (
