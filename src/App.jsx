@@ -70,16 +70,17 @@ export const App = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          padding: '200px'
+
+
         }}>
-          <h3>you and your new pet</h3>
-          <p>your name: {yourName}</p>
-          <p>your age: {yourAge}</p>
-          <p>type of pet: {selectedPet}</p>
-          <p>name: {namePet}</p>
-          <p>color: {color}</p>
+          <h3>You, your new pet and new adventures:</h3>
+
+          <p>In a cozy town, adventurous {yourAge} - year old {yourName} met {namePet}, a rare {color} {selectedPet}. Their instant connection led to countless adventures and captivating the town. Under the old oak tree, they pledged to explore the world together, proving extraordinary friendships transcend colors. Off they went, leaving the comfort of home for a colorful journey.</p>
         </div>
       )}
+
 
     </div>
   );
