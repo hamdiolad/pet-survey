@@ -8,21 +8,21 @@ const NamePet = ({ onNext, setNamePetProp }) => {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault(); 
-    console.log(namePet); 
-    setNamePetProp(namePet); 
+    event.preventDefault();
+    console.log(namePet);
+    setNamePetProp(namePet);
     onNext();
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <input 
-        type="text" 
-        value={namePet} 
+      <input
+        type="text"
+        value={namePet}
         onChange={handleNamePet}
-        style={{ width : '210px'}} 
+        style={{ width: '210px' }}
       />
-      <button type="submit">Next</button>
+      <button type="submit" className="next-button">Next</button>
     </form>
   );
 }

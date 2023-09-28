@@ -22,7 +22,8 @@ const YourName = ({ onNext, setYourNameProp }) => {
                 onChange={handleYourName}
                 style={{ width: '210px' }}
             />
-            <button type="submit">Next</button>
+
+            <button type="submit" className="next-button">Next</button>
         </form>
     );
 }

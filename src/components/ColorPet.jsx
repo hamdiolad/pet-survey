@@ -8,10 +8,10 @@ const ColorPet = ({ setColorPetProp, onNext }) => {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault(); 
-    console.log(color); 
-    setColorPetProp(color); 
-    onNext(); 
+    event.preventDefault();
+    console.log(color);
+    setColorPetProp(color);
+    onNext();
   };
 
   return (
@@ -27,7 +27,7 @@ const ColorPet = ({ setColorPetProp, onNext }) => {
         <option value="brown">brown</option>
         <option value="green">green</option>
       </select>
-      <button type="submit">Submit</button>
+      <button type="submit" className="next-button">Submit</button>
     </form>
   );
 }

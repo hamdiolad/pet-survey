@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import NamePet from './components/NamePet';
 import ColorPet from './components/ColorPet';
@@ -43,7 +44,7 @@ export const App = () => {
         </div>
       )}
 
-      
+
       {step === 4 && (
         <>
           <h3>what will be the name of this pet?</h3>
@@ -57,7 +58,7 @@ export const App = () => {
         </>
       )}
 
-        {step === 6 && (
+      {step === 6 && (
         <div style={{
           backgroundColor: color,
           // color: getTextColor(color),
@@ -79,7 +80,7 @@ export const App = () => {
           <p>color: {color}</p>
         </div>
       )}
-      
+
     </div>
   );
 }

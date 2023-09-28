@@ -18,12 +18,15 @@ export const PetsRadioButton = ({ selectedPet, setSelectedPet, onNext }) => {
     console.log("Selected pet:", selectedPet)
     onNext();
   }
-  
+
   return (
     <form className="pet-form" onSubmit={handleSubmit}>
       Choose your favorite animal as a pet:
+      <br /> {/* Add a line break to stack options vertically */}
+      <br />
       {petOptions.map((petOption) => (
         <label key={petOption} htmlFor="pet-radio">
+
           <input
             className="radio-btn"
             type="radio"
@@ -31,9 +34,11 @@ export const PetsRadioButton = ({ selectedPet, setSelectedPet, onNext }) => {
             onChange={handlePetSelection}
             checked={selectedPet === petOption} />
           {petOption}
+
         </label>
       ))}
-      <button type="submit">Next</button>
+
+      <button type="submit" className="next-button">Next</button>
     </form>
   )
 }
