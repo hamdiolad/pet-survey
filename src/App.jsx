@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import NamePet from './components/NamePet';
 import ColorPet from './components/ColorPet';
 import YourName from './components/YourName'; // your name
-// import YourAge from './components/YourAge'; // your age
+import YourAge from './components/YourAge'; // your age
 // import PetsRadioButton from './components/PetsRadioButton' // 5 pets option radio button
 
 
@@ -40,11 +40,28 @@ export const App = () => {
 
   }
 
-      {step === 2 && (
+      {/* {step === 2 && (
         <>
           <ColorPet onNext={proceedToNextStep} setColorPetProp={setColor} />
         </>
       )}
+
+       */}
+
+{
+    step === 2 && ( //age
+
+      <>
+        <h4>What is your age?</h4>
+        <YourAge onNext={proceedToNextStep} setYourAgeProp={setYourAge} />
+
+      </>
+    )
+
+  }
+
+
+
       {step === 3 && (
         <div style={{
           backgroundColor: color,
@@ -66,17 +83,17 @@ export const App = () => {
       )}
     </div>
   );
-  {
-    step === 4 && ( //name
+  // {
+  //   step === 4 && ( //name
 
-      <>
-        <h4>What is you name?</h4>
-        <YourName onNext={proceedToNextStep} setYourNameProp={setYourName} />
+  //     <>
+  //       <h4>What is you name?</h4>
+  //       <YourName onNext={proceedToNextStep} setYourNameProp={setYourName} />
 
-      </>
-    )
+  //     </>
+  //   )
 
-  }
+  // }
 
   {
     step === 5 && ( //age
