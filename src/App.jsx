@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import NamePet from './components/NamePet';
 import ColorPet from './components/ColorPet';
 import YourName from './components/YourName'; // your name
-import YourAge from './components/YourAge'; // your age
-import PetsRadioButton from './components/PetsRadioButton' // 5 pets option radio button
+// import YourAge from './components/YourAge'; // your age
+// import PetsRadioButton from './components/PetsRadioButton' // 5 pets option radio button
 
 
 export const App = () => {
