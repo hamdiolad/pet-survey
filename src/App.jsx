@@ -4,6 +4,7 @@ import ColorPet from './components/ColorPet';
 import YourName from './components/YourName'; // your name
 import YourAge from './components/YourAge'; // your age
 import PetsRadioButton from './components/PetsRadioButton' // 5 pets option radio button
+import Header from './components/Header'
 
 
 export const App = () => {
@@ -20,6 +21,7 @@ export const App = () => {
 
   return (
     <div>
+      <Header />
       {step === 1 && (
         <>
           <h4>What is your name?</h4>
