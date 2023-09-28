@@ -8,13 +8,19 @@ const petOptions = [
   'Hamster'
 ]
 
-export const PetsRadioButton = ({ selectedPet, setSelectedPet }) => {
+export const PetsRadioButton = ({ selectedPet, setSelectedPet, onNext }) => {
   const handlePetSelection = (event) => {
     setSelectedPet(event.target.value)
   }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("Selected pet:", selectedPet)
+    onNext();
+  }
   
   return (
-    <form className="pet-form" onSubmit={(event) => event.preventDefault()}>
+    <form className="pet-form" onSubmit={handleSubmit}>
       Choose your favorite animal as a pet:
       {petOptions.map((petOption) => (
         <label key={petOption} htmlFor="pet-radio">
@@ -27,6 +33,7 @@ export const PetsRadioButton = ({ selectedPet, setSelectedPet }) => {
           {petOption}
         </label>
       ))}
+      <button type="submit">Next</button>
     </form>
   )
 }

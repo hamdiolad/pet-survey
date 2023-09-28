@@ -37,7 +37,7 @@ export const App = () => {
       {step === 3 && (
         <div className="App">
           <h1>Choose your favorite animal as pet:</h1>
-          <PetsRadioButton />
+          <PetsRadioButton setSelectedPet={setSelectedPet} selectedPet={selectedPet} onNext={proceedToNextStep} />
         </div>
       )}
 
@@ -47,6 +47,35 @@ export const App = () => {
           <h3>what will be the name of this pet?</h3>
           <NamePet onNext={proceedToNextStep} setNamePetProp={setNamePet} />
         </>
+      )}
+
+      {step === 5 && (
+        <>
+          <ColorPet onNext={proceedToNextStep} setColorPetProp={setColor} />
+        </>
+      )}
+
+        {step === 6 && (
+        <div style={{
+          backgroundColor: color,
+          // color: getTextColor(color),
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}>
+          <h3>you and your new pet</h3>
+          <p>your name: {yourName}</p>
+          <p>your age: {yourAge}</p>
+          <p>type of pet: {selectedPet}</p>
+          <p>name: {namePet}</p>
+          <p>color: {color}</p>
+        </div>
       )}
       
     </div>

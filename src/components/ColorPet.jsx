@@ -23,9 +23,9 @@ const ColorPet = ({ setColorPetProp, onNext }) => {
         onChange={handleColorPet}>
         <option value="">..for your new pet?</option>
         <option value="black">black</option>
-        <option value="white">white</option>
+        <option value="yellow">yellow</option>
         <option value="brown">brown</option>
-        <option value="rainbow">rainbow</option>
+        <option value="green">green</option>
       </select>
       <button type="submit">Submit</button>
     </form>
