@@ -20,13 +20,26 @@ export const App = () => {
 
   return (
     <div>
-      {step === 1 && (
+      {/* {step === 1 && (
         <>
           <h3>what will be the name of this pet?</h3>
           <NamePet onNext={proceedToNextStep} setNamePetProp={setNamePet} />
 
         </>
-      )}
+      )} */}
+
+{
+    step === 1 && ( //name
+
+      <>
+        <h4>What is you name?</h4>
+        <YourName onNext={proceedToNextStep} setYourNameProp={setYourName} />
+
+      </>
+    )
+
+  }
+
       {step === 2 && (
         <>
           <ColorPet onNext={proceedToNextStep} setColorPetProp={setColor} />
