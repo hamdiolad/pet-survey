@@ -40,6 +40,15 @@ export const App = () => {
           <PetsRadioButton />
         </div>
       )}
+
+      
+      {step === 4 && (
+        <>
+          <h3>what will be the name of this pet?</h3>
+          <NamePet onNext={proceedToNextStep} setNamePetProp={setNamePet} />
+        </>
+      )}
+      
     </div>
   );
 }
