@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const YourAge = ({ onNext, setYourNameProp }) => {
+const YourAge = ({ onNext, setYourAgeProp }) => {
     const [yourAge, setYourAge] = useState('');
 
     const handleYourAge = (event) => {
@@ -10,7 +10,7 @@ const YourAge = ({ onNext, setYourNameProp }) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(yourAge);
-        setYourNameProp(yourAge);
+        setYourAgeProp(yourAge);
         onNext();
     };
 
