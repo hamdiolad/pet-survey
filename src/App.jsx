@@ -9,6 +9,7 @@ import Header from './components/Header'
 
 
 export const App = () => {
+  const totalSteps = 6; 
   const [step, setStep] = useState(1);
   const [namePet, setNamePet] = useState('');
   const [color, setColor] = useState('');
@@ -29,9 +30,14 @@ export const App = () => {
     setSelectedPet('');
   };
 
+  const progressPercentage = (step / totalSteps) * 100;
+
   return (
     <div>
       <Header />
+      <div style={{ background: 'lightgray', height: '20px', marginBottom: '10px' }}>
+        <div style={{ width: `${progressPercentage}%`, height: '100%', background: 'blue' }}></div>
+      </div>
       {step === 1 && (
         <>
           <h4>What is your name?</h4>
