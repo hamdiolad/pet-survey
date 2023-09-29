@@ -20,7 +20,8 @@ const ColorPet = ({ setColorPetProp, onNext }) => {
       <select
         className="color-pet-drop-down"
         value={color}
-        onChange={handleColorPet}>
+        onChange={handleColorPet}
+        required>
         <option value="">..for your new pet?</option>
         <option value="black">black</option>
         <option value="yellow">yellow</option>

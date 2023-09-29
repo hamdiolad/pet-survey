@@ -30,9 +30,12 @@ export const PetsRadioButton = ({ selectedPet, setSelectedPet, onNext }) => {
           <input
             className="radio-btn"
             type="radio"
+            name="petChoice" 
             value={petOption}
             onChange={handlePetSelection}
-            checked={selectedPet === petOption} />
+            checked={selectedPet === petOption} 
+            required
+            />
           {petOption}
 
         </label>

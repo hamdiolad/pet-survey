@@ -21,6 +21,7 @@ const YourAge = ({ onNext, setYourAgeProp }) => {
                 value={yourAge}
                 onChange={handleYourAge}
                 style={{ width: '210px' }}
+                required
             />
             <button type="submit" className="next-button">Next</button>
         </form>
