@@ -9,7 +9,7 @@ import Header from './components/Header'
 
 
 export const App = () => {
-  const totalSteps = 6; 
+  const totalSteps = 6;
   const [step, setStep] = useState(1);
   const [namePet, setNamePet] = useState('');
   const [color, setColor] = useState('');
@@ -93,7 +93,7 @@ export const App = () => {
           <h3>You, your new pet and new adventures:</h3>
 
           <p>In a cozy town, adventurous {yourAge} - year old {yourName} met {namePet}, a rare {color} {selectedPet}. Their instant connection led to countless adventures and captivating the town. Under the old oak tree, they pledged to explore the world together, proving extraordinary friendships transcend colors. Off they went, leaving the comfort of home for a colorful journey.</p>
-        
+
           <button onClick={resetForm}>Restart</button>
 
         </div>
@@ -106,3 +106,4 @@ export const App = () => {
 
 export default App;
 
+//hejhej test 
